@@ -14,6 +14,10 @@ from werkzeug.exceptions import HTTPException
 app = Flask(__name__)
 swagger = Swagger(app)
 
+# # Postgresql
+app.config.from_object(os.environ['APP_SETTINGS'])
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 # global strict slashes
 app.url_map.strict_slashes = False
 
