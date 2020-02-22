@@ -6,9 +6,6 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
-    MYSQL_USER = os.environ['MYSQL_USER']
-    MYSQL_PWD = os.environ['MYSQL_PWD']
-    MYSQL_DB = os.environ['MYSQL_DB']
 
 
 class ProductionConfig(Config):

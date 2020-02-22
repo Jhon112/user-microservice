@@ -29,7 +29,9 @@ class DBStorage:
             creates the engine self.__engine
         """
         self.__engine = create_engine(
-            'postgresql+psycopg2://postgres:jhon1234@{}/{}'.format(
+            'postgresql://{}:{}@{}/{}'.format(
+                os.environ.get('MYSQL_USER'),
+                os.environ.get('MYSQL_PWD'),
                 os.environ.get('MYSQL_HOST'),
                 os.environ.get('MYSQL_DB')))
         if os.environ.get("ENV") == 'test':
