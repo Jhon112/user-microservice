@@ -38,3 +38,10 @@ setupfiles along with a brief explanation:
 * **`setup_mysql_test.sql`:** initializes test database with mysql for testing
 
   * Usage: `$ cat setup_mysql_test.sql | mysql -uroot -p`
+
+  * Testing with Swagger:
+
+  * In browser visit path: `/apidocs` or:
+  * localhost: `http://0.0.0.0:5000/apidocs`
+  * your dowmain: `http://yourdomain/apidocs`
+
